@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Игра Гая</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+  <h1>Я ВСЕХ ЗНАЮ!</h1>
+  <div id="solution-space">
+  <div class="solution-column" data-pool="names"></div>
+  <div class="solution-column" data-pool="countries"></div>
+  <div class="solution-column" data-pool="flags"></div>
+  <div class="solution-column" data-pool="fields"></div>
+</div>
+
+  <div class="pools">
+    <div class="pool" id="pool-names"><h2>Спортсмены</h2></div>
+    <div class="pool" id="pool-countries"><h2>Страны</h2></div>
+    <div class="pool" id="pool-flags"><h2>Флаги</h2></div>
+    <div class="pool" id="pool-fields"><h2>Какой спорт</h2></div>
+  </div>
+  
+  <div id="completed-pools" style="display: none;">
+    <h2>Правильно!</h2>
+    <div id="completed-row"></div>
+  </div>
+  <div id="score">0 Очков</div>
+  <button id="show-top-scores-button" class="leaderboard-btn">🏆 Лучшие результаты 🏆</button>
+  <footer id="footer-credit">© Игра от мамы</footer>
+  <div id="stats-popup" class="hidden">
+    <div class="popup-content">
+      <h2>Молодец!</h2>
+      <p id="time-taken">Ты справился за X секунд.</p>
+      <p id="score-for-stats">X очков</p>
+      <input type="text" id="player-name" placeholder="Ваше имя" />
+      <div class="popup-buttons">
+        <button onclick="submitScore()">Сохранить</button>
+        <button id="play-again">Ещё раз</button>
+        <button id="close-popup">Нет, спасибо</button>
+      </div>
+      <div id="top-scores"></div>
+    </div>
+  </div>
+  <div id="leaderboard-popup" class="hidden">
+    <div class="popup-content">
+      <h2>🏆 Таблица лидеров 🏆</h2>
+      <div id="leaderboard-list"></div>
+      <div class="popup-buttons">
+        <button id="close-leaderboard">Закрыть</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
